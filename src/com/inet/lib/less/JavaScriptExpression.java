@@ -121,9 +121,6 @@ public class JavaScriptExpression extends Expression {
      * @param formatter current formatter
      */
     private void eval( CssFormatter formatter ) {
-        if( type != UNKNOWN ) {
-            return;
-        }
         try {
             ScriptEngineManager factory = new ScriptEngineManager( getClass().getClassLoader() );
             ScriptEngine engine = factory.getEngineByName( "JavaScript" );
